@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatsPageComponent implements OnInit {
 
+  headerText: string = 'Chats';
+
   constructor() { }
 
   ngOnInit(): void {

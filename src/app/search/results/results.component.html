@@ -1,1 +1,8 @@
-<p>results works!</p>
+<div class="results">
+    <p *ngIf="results.length > 0">ALL RESULTS</p>
+    <div class="results-grid">
+        <div *ngFor="let image of results" class="image">
+            <img src="{{image.src}}">
+        </div>    
+    </div>
+</div>

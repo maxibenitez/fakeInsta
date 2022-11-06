@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadPageComponent implements OnInit {
 
+  headerText: string = 'Upload picture';
+  buttonText: string = 'Upload';
+  icon: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

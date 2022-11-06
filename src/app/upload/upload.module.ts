@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { UploadPageComponent } from './upload-page/upload-page.component';
 import { UploadFormComponent } from './upload-form/upload-form.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -10,8 +12,12 @@ import { UploadFormComponent } from './upload-form/upload-form.component';
     UploadPageComponent,
     UploadFormComponent
   ],
+  exports: [
+    UploadPageComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class UploadModule { }

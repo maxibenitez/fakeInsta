@@ -1,0 +1,37 @@
+.full-image-page{
+    height: 100vh;
+    width: 100%;
+
+    .full-image-header{
+        position: absolute;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 15%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        color: white;
+
+        .user-component{
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+
+    .full-image{
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+        position: relative;
+        height: 30%;
+    
+        img{
+            height: 100vh;
+            width: auto;
+            z-index: -1;
+        }
+    }
+}

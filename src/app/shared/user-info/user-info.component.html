@@ -1,1 +1,10 @@
-<p>user-info works!</p>
+<div class="user">
+    <div *ngIf="image" class="user-picture">
+        <img src="{{image.src}}">
+    </div>
+    
+    <div *ngIf="user" class="user-info">
+        <h1>{{user.firstName}}</h1>
+        <p>{{user.username}}</p>
+    </div>
+</div>

@@ -1,1 +1,7 @@
-<p>posts-grid works!</p>
+<ngb-carousel class="carousel" *ngIf="posts">
+  <ng-template  *ngFor="let post of posts" ngbSlide>
+    <div class="picsum-img-wrapper">
+      <app-post [post]="post"></app-post>
+    </div>
+  </ng-template>
+</ngb-carousel>

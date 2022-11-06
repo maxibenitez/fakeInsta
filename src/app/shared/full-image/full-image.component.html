@@ -1,1 +1,14 @@
-<p>full-image works!</p>
+<div class="full-image-page">
+
+    <div class="full-image-header">
+        <div *ngIf="user" class="user-component">
+            <app-user-info [user]="user"></app-user-info>
+        </div>
+        <i class="bi bi-x-lg" (click)="goBack()"></i>
+    </div>
+    
+    <div *ngIf="image" class="full-image">
+        <img src="{{image.src}}">
+    </div>
+
+</div>

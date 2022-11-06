@@ -1,1 +1,9 @@
-<p>post works!</p>
+<div class="post">
+    <a *ngIf="image" class="post-image" routerLink="/posts/{{post.id}}">
+        <img src="{{image.src}}">
+    </a>
+
+    <div *ngIf="user" class="post-user">
+        <app-user-info [user]="user"></app-user-info>
+    </div>
+</div>

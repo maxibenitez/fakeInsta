@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UploadFormComponent implements OnInit {
 
+  icon: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

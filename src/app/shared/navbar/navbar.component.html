@@ -1,1 +1,21 @@
-<p>navbar works!</p>
+<footer *ngIf="currentPath !== 'posts/:id'" class="footer border-top">
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" routerLink="home" routerLinkActive="active">
+                <i class="bi bi-house"></i>
+            </a>
+            <a class="navbar-brand" routerLink="search" routerLinkActive="active">
+                <i class="bi bi-search"></i>
+            </a>
+            <a class="navbar-brand uploadButton" routerLink="upload" routerLinkActive="active">
+                <app-button></app-button>
+            </a>
+            <a class="navbar-brand" routerLink="chats" routerLinkActive="active">
+                <i class="bi bi-chat"></i>
+            </a>
+            <a class="navbar-brand" routerLink="profile" routerLinkActive="active">
+                <i class="bi bi-person"></i>
+            </a>
+        </div>
+    </nav>
+</footer>

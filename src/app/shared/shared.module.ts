@@ -5,7 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { FullImageComponent } from './full-image/full-image.component';
 import { ButtonComponent } from './button/button.component';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -17,12 +17,15 @@ import { ButtonComponent } from './button/button.component';
     ButtonComponent
   ],
   exports: [
+    ButtonComponent,
+    FullImageComponent,
     HeaderComponent,
     NavbarComponent,
     UserInfoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SharedModule { }
