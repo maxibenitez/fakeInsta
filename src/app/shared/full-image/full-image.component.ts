@@ -57,5 +57,4 @@ export class FullImageComponent implements OnInit {
     this.location.back();
   }
 
-
 }
