@@ -2,41 +2,15 @@
     height: 93vh;
     width: 100%;
     padding: 3%;
-    padding-top: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.user-picture{
-    margin-bottom: 3%;
-    width: 30vw;
-    height: 12vh;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-
-    img{
-        width: auto;
-        height: 100%;
-        border-radius: 100%;
-        object-fit: cover;
-    }
-}
-
 .user-info{
-    text-align: center;
-    height: 12vh;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 25vh;
     overflow: hidden;
-
-    p{
-        font-size: 0.7em;
-        font-weight: bold;  
-    }
 }
 
 .buttons{
@@ -47,6 +21,7 @@
     font-weight: bold;
     height: 13vh;
     width: 100%;
+    margin-top: 5%;
     margin-bottom: 5%;
     overflow: hidden;
 
@@ -64,4 +39,10 @@
         border-radius: 0.5rem;
         background-color: white;
     }
+}
+
+.user-posts{
+    width: 100%;
+    height: 60vh;
+    overflow: scroll;
 }

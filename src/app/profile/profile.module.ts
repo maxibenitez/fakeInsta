@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ImagesGridComponent } from './images-grid/images-grid.component';
-
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,8 @@ import { ImagesGridComponent } from './images-grid/images-grid.component';
     ProfilePageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class ProfileModule { }

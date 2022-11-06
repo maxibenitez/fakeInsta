@@ -18,6 +18,7 @@ export class PostComponent implements OnInit {
   
   image?: Image;
   user?: User;
+  class: string = 'user';
 
   constructor(private imageService: ImageService, private userService: UserService) { }
 

@@ -2,7 +2,7 @@
 
     <div class="full-image-header">
         <div *ngIf="user" class="user-component">
-            <app-user-info [user]="user"></app-user-info>
+            <app-user-info [user]="user" [class]="class"></app-user-info>
         </div>
         <i class="bi bi-x-lg" (click)="goBack()"></i>
     </div>

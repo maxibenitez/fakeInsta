@@ -17,13 +17,6 @@ export class ImageService {
     return this.http.get<Image[]>(this.imagesUrl);
   }
 
-  searchImages(term: string): Observable<Image[]> {
-    if (!term.trim()) {
-      return of([]);
-    }
-    return this.http.get<Image[]>(`${this.imagesUrl}/?description=${term}`);
-  }
-
   getImage(id: number): Observable<Image> {
     const url = `${this.imagesUrl}/${id}`;
     return this.http.get<Image>(url);

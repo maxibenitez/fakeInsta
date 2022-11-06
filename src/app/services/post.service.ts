@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
+import { filter, map } from 'rxjs/operators'
 import { Post } from '../interfaces/post';
 
 @Injectable({
@@ -21,5 +22,10 @@ export class PostService {
     const url = `${this.postsUrl}/${id}`;
     return this.http.get<Post>(url);
   }
+
+  // getPostsByUser(id: number): Observable<Post[]> {
+  //   this.http.get<Post[]>(this.postsUrl).pipe(
+  //     filter(x => {return x.}));
+  // }
 
 }

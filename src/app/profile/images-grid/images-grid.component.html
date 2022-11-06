@@ -1,1 +1,7 @@
-<p>images-grid works!</p>
+<div *ngIf="userImages" class="user-images">
+    <div class="images-grid">
+        <div *ngFor="let image of userImages" class="image">
+            <img src="{{image.src}}">
+        </div>
+    </div>
+</div>

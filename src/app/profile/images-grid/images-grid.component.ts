@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { Image } from 'src/app/interfaces/image';
 
 @Component({
   selector: 'app-images-grid',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./images-grid.component.scss']
 })
 export class ImagesGridComponent implements OnInit {
+
+  @Input() userImages?: Image[] = [];
 
   constructor() { }
 

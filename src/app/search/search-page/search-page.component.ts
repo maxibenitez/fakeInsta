@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ImageService } from 'src/app/services/image.service';
 
 import { Image } from '../../../app/interfaces/image';
 
@@ -11,20 +10,15 @@ import { Image } from '../../../app/interfaces/image';
 export class SearchPageComponent implements OnInit {
 
   headerText: string = 'Search';
-  results: Image[] = [];
+  results?: Image[] = [];
 
-  constructor(private imageService: ImageService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  search(term: string){
-    console.log(term)
-
-    this.imageService.searchImages(term)
-    .subscribe(images => this.results = images);
-
-    console.log(this.results)
+  searchResults(results: Image[]){
+    this.results = results;
   }
 
 }

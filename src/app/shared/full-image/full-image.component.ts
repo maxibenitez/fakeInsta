@@ -20,6 +20,7 @@ export class FullImageComponent implements OnInit {
   post!: Post;
   image!: Image;
   user!: User;
+  class: string = 'user';
 
   constructor(
     private route: ActivatedRoute, 

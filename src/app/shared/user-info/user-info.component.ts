@@ -13,6 +13,7 @@ import { ImageService } from 'src/app/services/image.service';
 export class UserInfoComponent implements OnInit {
 
   @Input() user?: User;
+  @Input() class?: string;
 
   image?: Image;
 

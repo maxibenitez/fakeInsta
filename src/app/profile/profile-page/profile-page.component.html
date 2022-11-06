@@ -1,12 +1,7 @@
 <div class="profile-page">
 
-    <div class="user-picture">
-        <img src="../../assets/profile-pics/cesar-rincon.jpg">
-    </div>
-
-    <div class="user-info">
-        <h1>Jane</h1>
-        <p>SAN FRANCISCO</p>
+    <div *ngIf="user" class="user-info">
+        <app-user-info [user]="user" [class]="class"></app-user-info>
     </div>
     
     <div class="buttons">
@@ -14,6 +9,8 @@
         <button type="button" class="message">MESSAGE</button>
     </div>
 
-    <app-images-grid></app-images-grid>
+    <div class="user-posts">
+        <app-images-grid [userImages]="userImages"></app-images-grid>
+    </div>
     
 </div>

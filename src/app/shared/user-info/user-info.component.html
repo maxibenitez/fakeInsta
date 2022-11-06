@@ -1,4 +1,4 @@
-<div class="user">
+<div [class]="(class === 'user') ? 'user': 'user-profile'">
     <div *ngIf="image" class="user-picture">
         <img src="{{image.src}}">
     </div>
