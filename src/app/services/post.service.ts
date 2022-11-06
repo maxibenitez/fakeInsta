@@ -9,7 +9,8 @@ import { Post } from '../interfaces/post';
 })
 export class PostService {
 
-  private postsUrl = 'api/posts';
+  //private postsUrl = 'api/posts';
+  private postsUrl = 'http://localhost:3001/api/posts';
 
   constructor(private http: HttpClient) { }
 

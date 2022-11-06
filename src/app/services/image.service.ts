@@ -9,7 +9,8 @@ import { Image } from '../interfaces/image';
 })
 export class ImageService {
 
-  private imagesUrl = 'api/images';
+  //private imagesUrl = 'api/images';
+  private imagesUrl = 'http://localhost:3001/api/images';
 
   constructor(private http: HttpClient) { }
 

@@ -9,7 +9,8 @@ import { User } from '../interfaces/user';
 })
 export class UserService {
 
-  private usersUrl = 'api/users';
+  //private usersUrl = 'api/users';
+  private usersUrl = 'http://localhost:3001/api/users';
 
   constructor(private http: HttpClient) { }
 
