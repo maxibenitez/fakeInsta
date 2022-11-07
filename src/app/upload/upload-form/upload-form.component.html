@@ -1,13 +1,27 @@
 <form>
-    <div class="select-button">
-        <button type="button" >Select file...</button>
+    <div class="select-button" (click)="showModal()">
+        <button type="button">Select file...</button>
+    </div>
+    <p *ngIf="fileSelected !== 0">File selected: {{fileSelected}}</p>
+
+    <div *ngIf="modal" class="file-selector">
+        <div class="file-selector-header">
+            <h5>Select file...</h5>
+            <i class="bi bi-x-lg" (click)="closeModal()"></i>
+        </div>
+    
+        <div *ngIf="images" class="file-selector-body">
+            <div *ngFor="let image of images" class="grid-selector">
+                <input type="image" src="{{image.src}}" (click)="selectImage(image.id)"/>
+            </div>
+        </div>
     </div>
 
     <div class="input">
         <textarea placeholder="Description..."></textarea>
     </div> 
 
-    <div class="upload-button">
+    <div class="upload-button" (click)="addPost()">
         <app-button [icon]="icon"></app-button>
     </div>
 </form>

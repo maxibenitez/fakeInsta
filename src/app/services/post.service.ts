@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { Post } from '../interfaces/post';
+import { NewPost, Post } from '../interfaces/post';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +21,11 @@ export class PostService {
   getPost(id: number): Observable<Post> {
     const url = `${this.postsUrl}/${id}`;
     return this.http.get<Post>(url);
+  }
+
+  addPost(post: NewPost): void{
+    console.log(post);
+    this.http.post(this.postsUrl, post);
   }
 
 }

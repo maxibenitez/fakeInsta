@@ -21,7 +21,10 @@ export class HomePageComponent implements OnInit {
 
   getPosts(): void {
     this.postService.getPosts()
-    .subscribe(posts => this.posts = posts);
+    .subscribe(posts => {
+      this.posts = posts
+      this.posts.reverse()	
+    });
   }
 
 }
