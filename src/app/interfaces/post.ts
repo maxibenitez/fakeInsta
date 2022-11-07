@@ -1,15 +1,17 @@
 export interface Post {
-    id: number;
-    userId: number; //cambiar a number si se quiere usar con in-memory-data
+    _id: number;
+    userId: number;
     imageId: number;
+    __v?: number;
 }
 
-export class NewPost{
-    //id: number = 0;
-    userId: string;
+export class NewPost implements Post{
+    _id: number = 0;
+    userId: number;
     imageId: number;
 
-    constructor(userId: string, imageId: number) {
+    constructor(id: number, userId: number, imageId: number) {
+        this._id = id;
         this.userId = userId;
         this.imageId = imageId;
     }

@@ -1,5 +1,6 @@
 export interface Image {
-    id: number;
+    _id: number;
     src: string;
     description: string;
+    __v?: number;
 }

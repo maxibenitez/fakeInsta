@@ -31,19 +31,19 @@ export class ProfilePageComponent implements OnInit {
     this.userService.getUser(id)
     .subscribe(user => {
       this.user = user
-      this.getImage(user.profilePic)
+      this.getProfileImage(user.profilePic)
       this.getPosts()
     });
   }
 
-  getImage(id: number): void {
+  getProfileImage(id: number): void {
     this.imageService.getImage(id)
     .subscribe(image => this.image = image);
   }
 
   getPosts(): void {
     this.postService.getPosts()
-    .pipe(map(posts => posts.filter(post => post.userId === this.user?.id)))
+    .pipe(map(posts => posts.filter(post => post.userId == this.user?._id)))
     .subscribe(posts => {
       this.userPosts = posts
       this.userPosts?.forEach(post => this.getPostImage(post.imageId));

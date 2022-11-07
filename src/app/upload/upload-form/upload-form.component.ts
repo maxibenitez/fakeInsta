@@ -43,7 +43,7 @@ export class UploadFormComponent implements OnInit {
   }
 
   addPost(): void{
-    var newPost = new NewPost('63680d1c2e7d3ba0faacb3f6', this.fileSelected);
+    var newPost = new NewPost(30, 1, this.fileSelected);
     this.postService.addPost(newPost);
     this.router.navigate(['home']);
   }

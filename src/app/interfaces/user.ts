@@ -1,7 +1,8 @@
 export interface User {
-    id: number,
+    _id: number,
     firstName: string;
     lastName: string;
     username: string;
     profilePic: number;
+    __v?: number;
 }

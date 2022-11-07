@@ -12,7 +12,7 @@
     
         <div *ngIf="images" class="file-selector-body">
             <div *ngFor="let image of images" class="grid-selector">
-                <input type="image" src="{{image.src}}" (click)="selectImage(image.id)"/>
+                <input type="image" src="{{image.src}}" (click)="selectImage(image._id)"/>
             </div>
         </div>
     </div>
